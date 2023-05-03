@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
+gem "devise-bootstrap5"
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
