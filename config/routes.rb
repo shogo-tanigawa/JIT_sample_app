@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'users/dash_boards'
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
-  root 'application#hello'
+  root 'users#dash_boards'
   
   devise_for :users
   resources :users, only: [:dash_boards]
