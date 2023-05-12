@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '3.0.0'
 
 gem 'rails', '~> 6.0.3'
+gem 'rails-i18n'
 gem 'bootstrap-sass'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
@@ -13,6 +14,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 gem "devise-bootstrap5"
+gem 'devise-i18n'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'

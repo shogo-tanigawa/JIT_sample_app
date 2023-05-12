@@ -1,4 +1,4 @@
-<h1>Resend confirmation instructions</h1>
+<h1><%= t('devise.shared.links.didn_t_receive_confirmation_instructions') %></h1>
 <div class="container">
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
@@ -9,7 +9,7 @@
           <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: "form-control mx-auto w-100" %>
         </div>
         <div class="actions">
-          <%= f.submit "Resend confirmation instructions", class: "btn btn-lg btn-primary d-block", style: "margin-left: auto; margin-right: auto;" %>
+          <%= f.submit t('.resend_confirmation_instructions'), class: "btn btn-lg btn-primary d-block", style: "margin-left: auto; margin-right: auto;" %>
         </div>
       <% end %>
       <div style="width: 80%; margin-left: auto; margin-right: auto;">
