@@ -28,6 +28,12 @@ class ArticlesController < ApplicationController
   end
   
   def update
+    if @article.update(article_params)
+      flash[:success] = '記事を更新しました。'
+      redirect_to @article
+    else
+      render :edit
+    end
   end
   
   def destroy

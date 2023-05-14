@@ -7,24 +7,24 @@
     <table class="table table-condensed table-hover article-index">
       <thead>
         <tr>
-          <th>詳細表示</th>
-          <th>タイトル</th>
-          <th>内容</th>
-          <th>画像</th>
-          <th>編集・削除</th>
+          <th style="width: 15%;">詳細表示</th>
+          <th style="width: 15%;">タイトル</th>
+          <th style="width: 15%;">内容</th>
+          <th style="width: 35%;">画像</th>
+          <th style="width: 20%;">編集・削除</th>
         </tr>
       </thead>
       <% @articles.each do |article| %>
         <tr>
-          <td><%= link_to "詳細", article_path(article), class: "btn btn-lg btn-primary" %></td>
+          <td><%= link_to "詳細", article_path(article), class: "btn btn-primary" %></td>
           <td><%= article.title %></td>
           <td><%= article.content %></td>
-          <td><%= image_tag url_for(article.image) if article.image.attached? %></td>
+          <td><%= image_tag url_for(article.image), class: "article-index-image" if article.image.attached? %></td>
           <td>
-          <%= link_to "編集", edit_article_path(article), class: "btn btn-lg btn-success" %>
+          <%= link_to "編集", edit_article_path(article), class: "btn btn-success" %>
           <%= link_to "削除", article, method: :delete,
               data: { confirm: "削除してよろしいですか？" },
-              class: "btn btn-lg btn-danger delete-btn", style: "margin-top: 0px;" %>
+              class: "btn btn-danger delete-btn", style: "margin-top: 0px;" %>
           </td>
         </tr>
       <% end %>
