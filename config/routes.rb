@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   root 'users#dash_boards'
   
   devise_for :users
-  resources :users do
-    resources :articles
+  resources :users, only: [:dash_boards] do
+    collection do
+      get 'dash_boards', to: 'users#dash_boards', as: 'dashboard'
+      resources :articles, path: 'articles'
+    end
   end
-  get 'users/dash_boards', to: 'users#dash_boards', as: 'user_dashboard'
 
   devise_scope :users do
     get '/users', to: redirect("/users/sign_up")
