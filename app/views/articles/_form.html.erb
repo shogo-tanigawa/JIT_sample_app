@@ -5,6 +5,8 @@
   <%= f.text_area :content, class: "form-control" %>
   <%= f.label :image, class: "label-#{yield(:class_text)}" %>
   <%= f.file_field :image, class: "form-control" %>
-  <%= f.submit yield(:button_text), class: "btn btn-primary btn-#{yield(:class_text)}" %><br>
+  <div class="text-center">
+    <%= f.submit yield(:button_text), class: "btn btn-primary btn-#{yield(:class_text)}" %><br>
+  </div>
   <%= link_to "戻る", :back %>
 <% end %>

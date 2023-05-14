@@ -1,0 +1,28 @@
+<h1>記事詳細</h1>
+<div class="row text-center">
+  <div class="col-md-8 col-md-offset-2">
+    <table class="table table-condensed article-show">
+      <thead>
+        <tr>
+          <th style="width: 33%;">タイトル</th>
+          <th style="width: 33%;">内容</th>
+          <th style="width: 34%;">画像</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @article.title %></td>
+          <td><%= @article.content %></td>
+          <td><%= image_tag url_for(@article.image) if @article.image.attached? %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="col-md-4 col-md-offset-4">
+      <%= link_to "編集", edit_article_path(@article), class: "btn btn-lg btn-success" %>
+      <%= link_to "削除", @article, method: :delete,
+          data: { confirm: "削除してよろしいですか？" },
+          class: "btn btn-lg btn-danger delete-btn", style: "margin-top: 0px;" %><br>
+      <%= link_to "記事一覧へ戻る", articles_path, class: "btn btn-lg btn-primary" %>
+    </div>
+  </div>
+</div>
