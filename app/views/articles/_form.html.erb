@@ -1,5 +1,5 @@
 <%= form_with(model: @article, local: true, multipart: true) do |f| %>
-  <%= render 'shared/error_messages' %>
+  <%= render 'shared/error_messages', object: @article %>
   <%= f.label :title, class: "label-#{yield(:class_text)}" %>
   <%= f.text_field :title, class: "form-control" %>
   <%= f.label :content, class: "label-#{yield(:class_text)}" %>
