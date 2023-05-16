@@ -1,0 +1,34 @@
+.article-index th {
+  text-align: center;
+}
+.article-show th {
+  text-align: center;
+}
+.article-index-image {
+  max-width: 35%;
+  height: auto;
+}
+.article-show-image {
+  aspect-ratio: 16/9;
+  max-width: 30%;
+  height: auto;
+}
+.label-article--new {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.label-article--edit {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.btn-article--new {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.btn-article--edit {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.btn-back-index {
+  margin-top: 20px;
+}
